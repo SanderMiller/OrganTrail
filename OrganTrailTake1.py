@@ -52,7 +52,7 @@ def gameplay(currentScenario):
     while 1:
 
         if currentScenario == 'ScenarioFight':
-            [health, currentScenario] = fight(attributes[1], attributes[0], currentScenario, lastScenario)
+            [health, currentScenario] = fight(strength, health, currentScenario, lastScenario)
 
         print('\n' +dialogue[currentScenario][0])
 
@@ -73,9 +73,8 @@ def gameplay(currentScenario):
         attributes['TurnPerFood'] += dialogue[currentScenario][3][int(Input) - 1][3]
         health = attributes['Health']
         TurnPerFood = attributes['TurnPerFood']
+        strength = attributes['Strength']
            
-          
-        #print('Your attributes are: Health = ' + str(attributes[0]-1) + ' Strength = ' + str(attributes[1])+'\n')
         
 
         lastScenario = currentScenario
@@ -87,15 +86,7 @@ def gameplay(currentScenario):
             print('Your tomb recieved an offering, your health has increased by 2')
         print('Health:' + str(health))
 
-    # try:
-    #     printResponse()
-    # except(IndexError):
-    #     print("Please Choose a number 1-3")
-    #     Input = input()
-    #
-    # except(IndexError):
-    #     print("Please Choose a number 1-3")
-    #     printResponse()
+  
 gameplay(currentScenario)
 
 print('This concludes the Demo Verion of Organ Trail™ for more please stay tuned!!!')
