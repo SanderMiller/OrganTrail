@@ -38,7 +38,7 @@ def resize(file_name, xDimension, yDimension):
 # resize('ArrowKeyUp.png',100,100)
 
 currentScenario = 'Scenario1'
-print('Your eyes open, or at least so it seems, but they’re met with a disconcerting sight. A coffin lies beneath you, with inscriptions that match your name. You notice a strange figure in the corner of the room. As they approach, you recognize it to be Anubis, the jackal headed god of the dead, son of Osiris. Anubis asks,“What is your name?” ')
+print('Your eyes open, or at least so it seems, but they\'re met with a disconcerting sight. A coffin lies beneath you, with inscriptions that match your name. You notice a strange figure in the corner of the room. As they approach, you recognize it to be Anubis, the jackal headed god of the dead, son of Osiris. Anubis asks,"What is your name?" ')
 name = input()
 print("Hello " + name+", you must be very confused. I’m afraid to say that you’re dead, due to a terrible accident. Don’t panic, death gets a bad reputation but it’s alright. We should get going, but real quick, what was your occupation?")
 scenarioCount = 0
@@ -120,6 +120,8 @@ while dead == False:
        
         if currentScenario == 'ScenarioFight':
             [health, currentScenario] = fight(strength, health, currentScenario, lastScenario)
+        
+        
 
         print('\n' +dialogue[currentScenario][0])
 
@@ -132,16 +134,15 @@ while dead == False:
             print(responseString2)
         health = 0
         strength = 0
-        visualize(currentScenario, health, strength)
+        #visualize(currentScenario, health, strength)
         Input = input()
-
+        if currentScenario == 'Scenario1':
+            TurnPerFood = dialogue[currentScenario][3][int(Input) - 1][3]
 
         attributes['Health'] += dialogue[currentScenario][3][int(Input) - 1][0]
         attributes['Strength'] += dialogue[currentScenario][3][int(Input) - 1][1]
         attributes['Merit'] += dialogue[currentScenario][3][int(Input) - 1][2]
-        attributes['TurnPerFood'] += dialogue[currentScenario][3][int(Input) - 1][3]
         health = attributes['Health']
-        TurnPerFood = attributes['TurnPerFood']
         strength = attributes['Strength']
 
         
