@@ -11,9 +11,9 @@ dialogue = {
     'Scenario3': ['You follow him into a crowd, but soon you lose sight of him... you look around, there is a traveler standing by themselves at the wall, what would you like to do?',
                  ['Approach them and ask for directions', 'Fight them for food (or bragging rights)', 'make your way on your own'], ['Scenario4', 'ScenarioFight', 'Scenario6'], [[-1,0,0], [-1,0,0], [-1,0,0]],['PyramidBackground.png', 'Anubis.png']],
     'Scenario4': ['You approach the stranger. She turns around and you notice her appearance. She had the body of a leopard, but her head was that of a hippopotamus. She held a "Khopesh", a massive sword and sickle hybrid. When she spoke, her voice was powerful and intimidating."Hello weary traveler, I am Henet Requ, guardian of the portal of fire. You look lost, would you like my assistance?"',
-                 ['Accept her offer', 'Make your way on your own', 'challenge her to a dance off'], ['Scenario5', 'Scenario6', 'ScenarioEnd'], [[-1,0,0], [-1,0,0], [-1,0,0]],['PyramidBackground.png', 'Anubis.png']],
+                 ['Accept her offer', 'Make your way on your own', 'challenge her to a dance off'], ['Scenario5', 'Scenario6', 'ScenarioEnd'], [[-1,0,0], [-1,0,0], [-1,0,0]],['PyramidBackground.png', 'Henet.jpg']],
     'Scenario5': ['"Hello Henet, I was following Anubis but seem to have lost my way, do you know the way to the Hall of Maat?" Her brow furrowed. I do know the way, although it is very treacherous. You must follow me.',
-                 ['Follow her', 'come on seriously, follow her', 'why are you not trusting Henet'], ['ScenarioEnd', 'ScenarioEnd', 'ScenarioEnd'], [[-1,0,0], [-1,0,0], [-1,0,0]],['PyramidBackground.png', 'Anubis.png']],
+                 ['Follow her', 'come on seriously, follow her', 'why are you not trusting Henet'], ['ScenarioEnd', 'ScenarioEnd', 'ScenarioEnd'], [[-1,0,0], [-1,0,0], [-1,0,0]],['PyramidBackground.png', 'Henet.jpg']],
     'Scenario6': ['You try to make it through crowd on your own. Eventually after fighting the current of souls you see a gate . There appear to be two options, a water and land route. What do you do?',
                  ['Approach the land route gate.','Approach the water route'], ['ScenarioEnd', 'ScenarioEnd'], [[0,0,0], [0,0,0], [0,0,0]],['PyramidBackground.png', 'Anubis.png']],
     #'Scenario7': ['',[],[]]
@@ -24,18 +24,18 @@ dialogue = {
     'ScenarioEnd': ['Alas, you perish, never to set eyes on the Hall of Maat. Thanks for playing!', ['you lose', 'you lose (even more horribly)'], ['Scenario1', 'Scenario1'],[[0,0,0], [0,0,0], [0,0,0]],['PyramidBackground.png', 'Anubis.png']]
     }
 
-file_path1 = '/home/cmay/Documents/OrganTrail/'
+file_path1 = '/home/sander/Documents/OrganTrail/'
 
 def resize(file_name, xDimension, yDimension):
     global file_path1
     file_path = file_path1 + file_name
     img = cv2.imread(file_path)
-    imgResized = cv2.resize(img, (xDimension, yDimension), cv2.INTER_CUBIC) #INTER_AREA
+    imgResized = cv2.resize(img, (xDimension, yDimension), cv2.INTER_AREA) #INTER_AREA
     cv2.imwrite(file_path, imgResized)
 
-# resize('Anubis.png',150,150)
-# resize('ArrowKeyRight.png',100,100)
-# resize('ArrowKeyUp.png',100,100)
+#resize('Henet.jpg',150,150)
+#resize('ArrowKeyRight.png',100,100)
+#resize('ArrowKeyUp.png',100,100)
 
 
 
