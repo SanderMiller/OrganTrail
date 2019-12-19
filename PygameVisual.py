@@ -11,13 +11,13 @@ dialogue = {
                   \nI’m afraid to say that you’re dead, due to a terrible accident. Don’t panic, death gets a bad \
                   \nreputation but it’s alright. We should get going, but real quick, what was your occupation? \
                   \n\n\nChoose your character',
-                 ['Pharaoh', 'Priest', 'Farmer'], ['Scenario2', 'Scenario2', 'Scenario2'], [[15,50,0,3], [10,60,1,5], [15,70,0,7]], ['PyramidBackground.png', 'Anubis.png'] ],
+                 ['Pharaoh', 'Priest', 'Farmer'], ['Scenario2', 'Scenario2', 'Scenario2'], [[15,50,0,3], [10,60,1,5], [15,70,0,7]], ['PyramidBackground.jpg', 'Anubis.png'] ],
     'Scenario2': ['We must make haste to the hall of two truths, so that your soul can be weighed against \
                   \na feather and we can learn whether you may pass into the afterlife. Any questions? \
                   \n“W- w-” \
                   \n“Good! Let’s get on with it then.” Anubis rushes out of the room with no further words, \
                   \nwhat will you do?.',
-                 ['follow him', 'ignore him, and stay where you are'], ['Scenario3', 'ScenarioEnd'], [[-1,0,0], [-1,0,0], [-1,0,0]], ['PyramidBackground.png', 'Anubis.png']],
+                 ['Follow him', 'Ignore him, and stay where you are'], ['Scenario3', 'ScenarioEnd'], [[-1,0,0], [-1,0,0], [-1,0,0]], ['PyramidBackground.jpg', 'Anubis.png']],
     'Scenario3': ['You follow him into a crowd, but soon you lose sight of him... you look around, \
                   \nthere is a traveler standing by themselves at the wall, what would you like to do?',
                  ['Approach them and ask for directions', 'Fight them for food (or bragging rights)', 'make your way on your own'], ['Scenario4', 'ScenarioFight', 'Scenario6'], [[-1,0,0], [-1,0,0], [-1,0,0]],['Cavern.jpg']],
@@ -28,13 +28,13 @@ dialogue = {
                   \nwould you like my assistance?"',
                  ['Accept her offer', 'Make your way on your own', 'challenge her to a dance off'], ['Scenario5', 'Scenario6', 'ScenarioEnd'], [[-1,0,0], [-1,0,0], [-1,0,0]],['Cavern.jpg', 'Henet.jpg']],
     'Scenario5': ['"Hello Henet, I was following Anubis but seem to have lost my way, do you know the way \
-                  \nto the Hall of Maat?" Her brow furrowed. I do know the way, although it is very treacherous. \
-                  \nYou must follow me.',
+                  \nto the Hall of Maat?" Her brow furrowed. "I do know the way, although it is very treacherous. \
+                  \nYou must follow me."',
                  ['Follow her', 'come on seriously, follow her', 'why are you not trusting Henet'], ['ScenarioEnd', 'ScenarioEnd', 'ScenarioEnd'], [[-1,0,0], [-1,0,0], [-1,0,0]],['Cavern.jpg', 'Henet.jpg']],
     'Scenario6': ['You try to make it through crowd on your own. Eventually after fighting the current of \
                   \nsouls you see a gate. There appear to be two options, a water and land route. \
                   \nWhat do you do?',
-                 ['Approach the land route gate.','Approach the water route'], ['ScenarioEnd', 'ScenarioEnd'], [[0,0,0], [0,0,0], [0,0,0]],['PyramidBackground.png']],
+                 ['Approach the land route gate.','Approach the water route'], ['ScenarioEnd', 'ScenarioEnd'], [[0,0,0], [0,0,0], [0,0,0]],['PyramidBackground.jpg']],
     #'Scenario7': ['',[],[]]
     #'Scenario8': ['',[],[]]
     #'Scenario9': ['',[],[]]
@@ -106,13 +106,14 @@ def visualize(currentScenario, health, strength):
     screen.blit(rightKey, [780, 820])
     screen.blit(font.render(healthText, 0, white), [1200, 50])
     screen.blit(font.render(strengthText, 0, white), [1200, 100])
-    screen.blit(font.render(option1, 0, white), [435, 860])
-    screen.blit(font.render(option2, 0, white), [900, 860])
+    multiline_render(option1, 435, 860, font)
+    multiline_render(option2, 900, 860, font)
+
     numOptions = len(dialogue[currentScenario][1])
     if numOptions == 3:
         option3 = dialogue[currentScenario][1][2]
         screen.blit(upKey, [670, 700])
-        screen.blit(font.render(option3, 0, white), [680, 660])
+        multiline_render(option3, 680, 660, font)
 
 
 pygame.init()
