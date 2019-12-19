@@ -4,24 +4,43 @@ import os
 import random
 
 dialogue = {
-    'Scenario1': ['Choose your character',
-                 ['Pharaoh', 'Priest', 'Farmer'], ['Scenario2', 'Scenario2', 'Scenario2'], [[15,50,0,3], [10,60,1,5], [15,70,0,7]], ['PyramidBackground.jpg', 'Anubis.png'] ],
-    'Scenario2': ['We must make haste to the hall of two truths, so that your soul can be weighed against a feather and we can learn whether you may pass into the afterlife. Any questions? \n “W- w-” \n “Good! Let’s get on with it then.” Anubis rushes out of the room with no further words, what will you do?.',
-                 ['follow him', 'ignore him, and stay where you are'], ['Scenario3', 'ScenarioEnd'], [[-1,0,0], [-1,0,0], [-1,0,0]], ['PyramidBackground.jpg', 'Anubis.png']],
-    'Scenario3': ['You follow him into a crowd, but soon you lose sight of him... you look around, there is a traveler standing by themselves at the wall, what would you like to do?',
+    'Scenario1': ['You open your eyes, or at least so it seems, but they\'re met with a disconcerting sight. \
+                  \nA coffin lies beneath you, with inscriptions that match your name. You notice a strange \
+                  \nfigure in the corner of the room. As they approach, you recognize it to be Anubis, the \
+                  \njackal headed god of the dead, son of Osiris. Hello, you must be very confused. \
+                  \nI’m afraid to say that you’re dead, due to a terrible accident. Don’t panic, death gets a bad \
+                  \nreputation but it’s alright. We should get going, but real quick, what was your occupation? \
+                  \n\n\nChoose your character',
+                 ['Pharaoh', 'Priest', 'Farmer'], ['Scenario2', 'Scenario2', 'Scenario2'], [[15,50,0,3], [10,60,1,5], [15,70,0,7]], ['PyramidBackground.png', 'Anubis.png'] ],
+    'Scenario2': ['We must make haste to the hall of two truths, so that your soul can be weighed against \
+                  \na feather and we can learn whether you may pass into the afterlife. Any questions? \
+                  \n“W- w-” \
+                  \n“Good! Let’s get on with it then.” Anubis rushes out of the room with no further words, \
+                  \nwhat will you do?.',
+                 ['follow him', 'ignore him, and stay where you are'], ['Scenario3', 'ScenarioEnd'], [[-1,0,0], [-1,0,0], [-1,0,0]], ['PyramidBackground.png', 'Anubis.png']],
+    'Scenario3': ['You follow him into a crowd, but soon you lose sight of him... you look around, \
+                  \nthere is a traveler standing by themselves at the wall, what would you like to do?',
                  ['Approach them and ask for directions', 'Fight them for food (or bragging rights)', 'make your way on your own'], ['Scenario4', 'ScenarioFight', 'Scenario6'], [[-1,0,0], [-1,0,0], [-1,0,0]],['Cavern.jpg']],
-    'Scenario4': ['You approach the stranger. She turns around and you notice her appearance. She had the body of a leopard, but her head was that of a hippopotamus. She held a "Khopesh", a massive sword and sickle hybrid. When she spoke, her voice was powerful and intimidating."Hello weary traveler, I am Henet Requ, guardian of the portal of fire. You look lost, would you like my assistance?"',
+    'Scenario4': ['You approach the stranger. She turns around and you notice her appearance. \
+                  \nShe had the body of a leopard, but her head was that of a hippopotamus. She held a "Khopesh", \
+                  \na massive sword and sickle hybrid. When she spoke, her voice was powerful and intimidating. \
+                  \n"Hello weary traveler, I am Henet Requ, guardian of the portal of fire. You look lost, \
+                  \nwould you like my assistance?"',
                  ['Accept her offer', 'Make your way on your own', 'challenge her to a dance off'], ['Scenario5', 'Scenario6', 'ScenarioEnd'], [[-1,0,0], [-1,0,0], [-1,0,0]],['Cavern.jpg', 'Henet.jpg']],
-    'Scenario5': ['"Hello Henet, I was following Anubis but seem to have lost my way, do you know the way to the Hall of Maat?" Her brow furrowed. I do know the way, although it is very treacherous. You must follow me.',
-                 ['Follow her', 'come on seriously, follow her', 'why are you not trusting Henet'], ['ScenarioEnd', 'ScenarioEnd', 'ScenarioEnd'], [[-1,0,0], [-1,0,0], [-1,0,0]],['PyramidBackground.png', 'Henet.jpg']],
-    'Scenario6': ['You try to make it through crowd on your own. Eventually after fighting the current of souls you see a gate . There appear to be two options, a water and land route. What do you do?',
+    'Scenario5': ['"Hello Henet, I was following Anubis but seem to have lost my way, do you know the way \
+                  \nto the Hall of Maat?" Her brow furrowed. I do know the way, although it is very treacherous. \
+                  \nYou must follow me.',
+                 ['Follow her', 'come on seriously, follow her', 'why are you not trusting Henet'], ['ScenarioEnd', 'ScenarioEnd', 'ScenarioEnd'], [[-1,0,0], [-1,0,0], [-1,0,0]],['Cavern.jpg', 'Henet.jpg']],
+    'Scenario6': ['You try to make it through crowd on your own. Eventually after fighting the current of \
+                  \nsouls you see a gate. There appear to be two options, a water and land route. \
+                  \nWhat do you do?',
                  ['Approach the land route gate.','Approach the water route'], ['ScenarioEnd', 'ScenarioEnd'], [[0,0,0], [0,0,0], [0,0,0]],['PyramidBackground.png']],
     #'Scenario7': ['',[],[]]
     #'Scenario8': ['',[],[]]
     #'Scenario9': ['',[],[]]
     #'Scenario10': ['',[],[]]
     #'Scenario11': ['',[],[]]
-    'ScenarioEnd': ['Alas, you perish, never to set eyes on the Hall of Maat. Thanks for playing!', ['you lose', 'you lose (even more horribly)'], ['Scenario1', 'Scenario1'],[[0,0,0], [0,0,0], [0,0,0]],['Youlost.jpg']]
+    'ScenarioEnd': ['', ['Play Again', 'Play Again'], ['Scenario1', 'Scenario1'],[[0,0,0], [0,0,0], [0,0,0]],['Youlost.jpg']]
     }
 
 file_path1 = '/home/cmay/Documents/OrganTrail/'
