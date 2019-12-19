@@ -59,11 +59,15 @@ def multiline_render(text, x, y, font):
 
 def visualize(currentScenario, health, strength):
     global dialogue
-    
+    avatar_status = True
     pygame.display.set_caption('Organ Trail')
     background_image = pygame.image.load(dialogue[currentScenario][4][0])
-    avatar_image = pygame.image.load(dialogue[currentScenario][4][1])
-    
+
+    try:
+        avatar_image = pygame.image.load(dialogue[currentScenario][4][1])
+    except IndexError:
+        avatar_status = False
+
     leftKey = pygame.image.load('ArrowKeyLeft.png')
     rightKey = pygame.image.load('ArrowKeyRight.png')
     upKey = pygame.image.load('ArrowKeyUp.png')
@@ -77,7 +81,8 @@ def visualize(currentScenario, health, strength):
     # textRect.center = (window_width // 2, window_height // 3)
     screen.blit(background_image, [0,0])
     multiline_render(text, 300, 150, font)
-    screen.blit(avatar_image, [100, 150])
+    if avatar_status:
+        screen.blit(avatar_image, [100, 150])
     screen.blit(leftKey, [560, 820])
     screen.blit(rightKey, [780, 820])
     screen.blit(font.render(healthText, 0, black), [1200, 50])
@@ -133,22 +138,22 @@ while dead == False:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             dead = True
-     
-        
-        
+
+
+
 
         print('\n' +dialogue[currentScenario][0])
 
         numOptions = len(dialogue[currentScenario][1])
-        
-        
+
+
         if numOptions == 3:
             responseString3 = 'Press 1 for ' + dialogue[currentScenario][1][0] + '. Press 2 for ' + dialogue[currentScenario][1][1] + '. Press 3 for ' + dialogue[currentScenario][1][2]+ '.\n'
             print(responseString3)
         elif numOptions == 2:
             responseString2 = 'Press 1 for ' + dialogue[currentScenario][1][0] + '. Press 2 for ' + dialogue[currentScenario][1][1] +'.\n'
             print(responseString2)
-        
+
         if (event.type == pygame.KEYDOWN and numOptions == 3 and (event.key == pygame.K_LEFT or event.key == pygame.K_RIGHT or event.key == pygame.K_UP)) or (event.type == pygame.KEYDOWN and (event.key == pygame.K_LEFT or event.key == pygame.K_RIGHT)):
             print(numOptions)
             if event.key == pygame.K_LEFT:
@@ -157,9 +162,9 @@ while dead == False:
                 Input = 2
             if event.key == pygame.K_UP and numOptions == 3:
                 Input = 3
-            
-        
-        
+
+
+
             if currentScenario == 'Scenario1':
                 health = dialogue[currentScenario][3][int(Input) - 1][0]
                 print(health)
@@ -171,14 +176,14 @@ while dead == False:
                 health += dialogue[currentScenario][3][int(Input) - 1][0]
                 strength += dialogue[currentScenario][3][int(Input) - 1][1]
                 merit += dialogue[currentScenario][3][int(Input) - 1][2]
-            
+
             numOptions = len(dialogue[currentScenario][1])
             lastScenario = currentScenario
             currentScenario = dialogue[currentScenario][2][int(Input) - 1]
             if currentScenario == 'ScenarioFight':
                 [health, currentScenario] = fight(strength, health, currentScenario, lastScenario)
             visualize(currentScenario, health, strength)
-        
+
             scenarioCount+=1
             if scenarioCount % TurnPerFood == 0:
                 health+=2
