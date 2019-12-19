@@ -4,7 +4,7 @@ import os
 import random
 from time import sleep
 import time
-'''
+
 dialogue = {
     'Scenario1': ['You open your eyes, or at least so it seems, but they\'re met with a disconcerting sight. \
                   \nA coffin lies beneath you, with inscriptions that match your name. You notice a strange \
@@ -48,8 +48,8 @@ dialogue = {
     #'Scenario11': ['',[],[]]
     'ScenarioEnd': ['k', ['Play Again', 'Play Again'], ['Scenario1', 'Scenario1'],[[0,0,0], [0,0,0], [0,0,0]],['Youlost.jpg']]
     }
-'''
-file_path1 = '/home/sander/Documents/OrganTrail/'
+
+file_path1 = '/home/cmay/Documents/OrganTrail/'
 
 def resize(file_name, xDimension, yDimension):
     global file_path1
@@ -58,11 +58,10 @@ def resize(file_name, xDimension, yDimension):
     imgResized = cv2.resize(img, (xDimension, yDimension), cv2.INTER_CUBIC) #INTER_AREA
     cv2.imwrite(file_path, imgResized)
 
-resize('taweret.jpg',150,150)
+# resize('taweret.jpg',150,150)
 #resize('ArrowKeyRight.png',100,100)
 #resize('ArrowKeyUp.png',100,100)
 
-'''
 
 def fight(strength, health, currentScenario, lastScenario):
     global dialogue
@@ -72,7 +71,7 @@ def fight(strength, health, currentScenario, lastScenario):
         FightVictory = pygame.image.load('FightVictory.jpg')
         screen.blit(FightVictory, [0, 0])
         pygame.display.flip()
-        time.sleep(3)
+        time.sleep(2)
         health += 3
         currentScenario = dialogue[lastScenario][2][3]
         print('Congrats, you defeated a demon!\n')
@@ -86,7 +85,16 @@ def fight(strength, health, currentScenario, lastScenario):
 def multiline_render(text, x, y, font):
     lines = text.splitlines()
     for i,l in enumerate(lines):
-        screen.blit(font.render(l, 0, white), (x, y + font.get_linesize()*i))
+        text = font.render(l, 0, black)
+        if text.get_size()[0] > 1075:
+            temp_surface = pygame.Surface((1075, 26))
+        else:
+            temp_surface = pygame.Surface(text.get_size())
+        if text.get_size() != (1, 25):
+            temp_surface.fill((255,255,255))
+            temp_surface.blit(text, (0,0))
+            screen.blit(temp_surface, (x, y  + font.get_linesize()*i))
+        screen.blit(text, (x, y + font.get_linesize()*i))
 
 def visualize(currentScenario, health, strength, additionalString):
     global dialogue
@@ -215,4 +223,3 @@ while dead == False:
             pygame.display.flip()
 
             clock.tick(clock_tick_rate)
-'''
