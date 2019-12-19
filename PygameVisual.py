@@ -32,21 +32,21 @@ dialogue = {
     'Scenario5': ['"Hello Taweret, I was following Anubis but seem to have lost my way, do you know the way \
                   \nto the Hall of Maat?" Her brow furrowed. "I do know the way, although it is very treacherous. \
                   \nYou must follow me."',
-                 ['Follow her', 'Suspecting a trap, runaway'], ['Scenario7', 'Scenario6'], [[-1,10,0], [-1,0,0], [-1,0,0]],['Cavern.jpg', 'Henet.jpg']],
+                 ['Follow her', 'Suspecting a trap, run away'], ['Scenario7', 'Scenario6'], [[-1,10,0], [-1,0,0], [-1,0,0]],['Cavern.jpg', 'taweret.jpg']],
     'Scenario6': ['You try to make it through crowd on your own. Eventually after fighting the current of \
                   \nsouls you see a gate. There appear to be two options, a water and land route. \
                   \nWhat do you do?',
-                 ['Approach the land route gate.','Approach the water route'], ['ScenarioEnd', 'ScenarioEnd'], [[0,0,0], [0,0,0], [0,0,0]],['PyramidBackground.jpg']],
+                 ['Approach the land route gate.','Approach the water route'], ['ScenarioEnd', 'ScenarioEnd'], [[0,0,0], [0,0,0], [0,0,0]],['Cavern.jpg']],
     'Scenario7': ['Congrats, through apotropaism you have befriended Taweret, the goddess of childbirth \
                   \nand fertility. By converting this god to your side, your strength has increased by 10! \
                   \n\nYou follow Taweret, who seems to easily navigate through the crowd of souls. Not wanting \
                   \nto lose your guide again you hastily follow. Eventually she leads you to a set of gates,\
                   \none leads to a vast ocean, while the other leads to stretch of land, full of fire. \
-                  \nWhich gate will you approach?',['Water Gate', 'Fire Gate'],['Scenario8','Scenario8'],[[-1,0,0], [-1,0,0], [-1,0,0]],['PyramidBackground.jpg']],
+                  \nWhich gate will you approach?',['Water Gate', 'Fire Gate'],['Scenario8','Scenario8'],[[-1,0,0], [-1,0,0], [-1,0,0]],['Cavern.jpg']],
     'Scenario8': ['Wait, before you go, remember that your journey to the Hall of Maat will be a dangerous one. \
                   \nNever trust anyone, and keep in mind that even if you make it to the Hall alive, your heart \
-                  \nwill be weighed, and you must must be seen as worthy to enter Sekhet-A’Aru, the field of reeds', ['Thank Taweret and Continue on', 'Thank Taweret and Continue On'],['ScenarioEnd','ScenarioEnd'],[[-1,0,0], [-1,0,0], [-1,0,0]],['PyramidBackground.jpg']],
-    #'Scenario8': ['',[],[]]ing like 
+                  \nwill be weighed, and you must must be seen as worthy to enter Sekhet-A’Aru, the field of reeds', ['Thank Taweret and Continue on', 'Thank Taweret and Continue On'],['ScenarioEnd','ScenarioEnd'],[[-1,0,0], [-1,0,0], [-1,0,0]],['Cavern.jpg', 'taweret.jpg']],
+    #'Scenario8': ['',[],[]]ing like
     #'Scenario9': ['',[],[]]
     #'Scenario10': ['',[],[]]
     #'Scenario11': ['',[],[]]
@@ -90,8 +90,8 @@ def multiline_render(text, x, y, font):
     lines = text.splitlines()
     for i,l in enumerate(lines):
         text = font.render(l, 0, black)
-        if text.get_size()[0] > 1075:
-            temp_surface = pygame.Surface((1075, 26))
+        if text.get_size()[0] > 1100:
+            temp_surface = pygame.Surface((1100, 26))
         else:
             temp_surface = pygame.Surface(text.get_size())
         if text.get_size() != (1, 25):
@@ -131,14 +131,20 @@ def visualize(currentScenario, health, strength, additionalString):
     screen.blit(font.render(healthText, 0, white), [1200, 50])
     screen.blit(font.render(strengthText, 0, white), [1200, 100])
     multiline_render(additionalString, 300, 50, font)
-    multiline_render(option1, 435, 860, font)
+    if len(option1) > 10:
+        multiline_render(option1, 435 - len(option1)*10, 860, font)
+    else:
+        multiline_render(option1, 435 - len(option1), 860, font)
     multiline_render(option2, 900, 860, font)
 
     numOptions = len(dialogue[currentScenario][1])
     if numOptions == 3:
         option3 = dialogue[currentScenario][1][2]
         screen.blit(upKey, [670, 700])
-        multiline_render(option3, 680, 660, font)
+        if len(option3) > 10:
+            multiline_render(option3, 680-len(option3)*5, 660, font)
+        else:
+            multiline_render(option3, 680, 660, font)
 
 
 pygame.init()
