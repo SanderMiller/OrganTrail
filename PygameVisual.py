@@ -7,7 +7,7 @@ dialogue = {
     'Scenario1': ['Choose your character',
                  ['Pharaoh', 'Priest', 'Farmer'], ['Scenario2', 'Scenario2', 'Scenario2'], [[15,50,0,3], [10,60,1,5], [15,70,0,7]], ['PyramidBackground.png', 'Anubis.png'] ],
     'Scenario2': ['We must make haste to the hall of two truths, so that your soul can be weighed against a feather and we can learn whether you may pass into the afterlife. Any questions? \n “W- w-” \n “Good! Let’s get on with it then.” Anubis rushes out of the room with no further words, what will you do?.',
-                 ['follow him', 'ignore him, and stay where you are'], ['Scenario3', 'ScenarioEnd'], [[-1,0,0,3], [-1,0,0,5], [-1,0,0,7]], ['Anubis.png', 'ArrowKey.png']],
+                 ['follow him', 'ignore him, and stay where you are'], ['Scenario3', 'ScenarioEnd'], [[-1,0,0,3], [-1,0,0,5], [-1,0,0,7]], ['PyramidBackground.png', 'Anubis.png']],
     'Scenario3': ['You follow him into a crowd, but soon you lose sight of him... you look around, there is a traveler standing by themselves at the wall, what would you like to do?',
                  ['Approach them and ask for directions', 'Fight them for food (or bragging rights)', 'make your way on your own'], ['Scenario4', 'ScenarioFight', 'Scenario6'], [[-1,0,0,3], [-1,0,0,5], [-1,0,0,7]]],
     'Scenario4': ['You approach the stranger. She turns around and you notice her appearance. She had the body of a leopard, but her head was that of a hippopotamus. She held a "Khopesh", a massive sword and sickle hybrid. When she spoke, her voice was powerful and intimidating."Hello weary traveler, I am Henet Requ, guardian of the portal of fire. You look lost, would you like my assistance?"',
@@ -77,7 +77,7 @@ def multiline_render(text, x, y, font):
     for i,l in enumerate(lines):
         screen.blit(font.render(l, 0, black), (x, y + font.get_linesize()*i))
 
-def visualize(currentScenario):
+def visualize(currentScenario, health, strength):
     global dialogue
     global numOptions
     pygame.display.set_caption('Organ Trail')
@@ -87,15 +87,18 @@ def visualize(currentScenario):
     rightKey = pygame.image.load('ArrowKeyRight.png')
     upKey = pygame.image.load('ArrowKeyUp.png')
     font = pygame.font.Font('freesansbold.ttf', 32)
-    text = 'Testing to see \n if this works \n wish me luck!'
-
+    text = dialogue[currentScenario][0]
+    healthText = 'Health: ' + str(health)
+    strengthText = 'Strength: ' + str(strength)
     # textRect = text.get_rect()
     # textRect.center = (window_width // 2, window_height // 3)
     screen.blit(background_image, [0,0])
-    multiline_render(text, 500, 100, font)
-    screen.blit(avatar_image, [100, 100])
+    multiline_render(text, 300, 150, font)
+    screen.blit(avatar_image, [100, 150])
     screen.blit(leftKey, [560, 820])
     screen.blit(rightKey, [780, 820])
+    screen.blit(font.render(healthText, 0, black), [1200, 50])
+    screen.blit(font.render(strengthText, 0, black), [1200, 100])
 
     if numOptions == 3:
         screen.blit(upKey, [670, 700])
@@ -114,6 +117,7 @@ while dead == False:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             dead = True
+       
         if currentScenario == 'ScenarioFight':
             [health, currentScenario] = fight(strength, health, currentScenario, lastScenario)
 
@@ -126,7 +130,9 @@ while dead == False:
         elif numOptions == 2:
             responseString2 = 'Press 1 for ' + dialogue[currentScenario][1][0] + '. Press 2 for ' + dialogue[currentScenario][1][1] +'.\n'
             print(responseString2)
-
+        health = 0
+        strength = 0
+        visualize(currentScenario, health, strength)
         Input = input()
 
 
@@ -138,7 +144,7 @@ while dead == False:
         TurnPerFood = attributes['TurnPerFood']
         strength = attributes['Strength']
 
-        visualize(currentScenario)
+        
 
         lastScenario = currentScenario
         currentScenario = dialogue[currentScenario][2][int(Input) - 1]
