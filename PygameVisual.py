@@ -2,6 +2,8 @@ import pygame
 import cv2
 import os
 import random
+from time import sleep
+import time
 
 dialogue = {
     'Scenario1': ['You open your eyes, or at least so it seems, but they\'re met with a disconcerting sight. \
@@ -56,7 +58,7 @@ def resize(file_name, xDimension, yDimension):
     imgResized = cv2.resize(img, (xDimension, yDimension), cv2.INTER_CUBIC) #INTER_AREA
     cv2.imwrite(file_path, imgResized)
 
-# resize('Cavern.jpg',1440,1024)
+# resize('FightVictory.jpg',1440,1024)
 #resize('ArrowKeyRight.png',100,100)
 #resize('ArrowKeyUp.png',100,100)
 
@@ -64,8 +66,13 @@ def resize(file_name, xDimension, yDimension):
 
 def fight(strength, health, currentScenario, lastScenario):
     global dialogue
+    global screen
     outcome = random.randint(1,100)
     if outcome <= strength:
+        FightVictory = pygame.image.load('FightVictory.jpg')
+        screen.blit(FightVictory, [0, 0])
+        pygame.display.flip()
+        time.sleep(3)
         health += 3
         currentScenario = dialogue[lastScenario][2][3]
         print('Congrats, you defeated a demon!\n')
@@ -195,10 +202,10 @@ while dead == False:
             currentScenario = dialogue[currentScenario][2][int(Input) - 1]
             if currentScenario == 'ScenarioFight':
                 [health, currentScenario] = fight(strength, health, currentScenario, lastScenario)
-            
+
 
             scenarioCount+=1
-            if scenarioCount % TurnPerFood == 0:
+            if scenarioCount % TurnPerFood == 0 and currentScenario != 'ScenarioEnd':
                 health+=2
                 additionalString = 'Your tomb recieved an offering, your health has increased by 2!'
             else:
