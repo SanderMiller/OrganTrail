@@ -149,12 +149,13 @@ while dead == False:
             responseString2 = 'Press 1 for ' + dialogue[currentScenario][1][0] + '. Press 2 for ' + dialogue[currentScenario][1][1] +'.\n'
             print(responseString2)
         
-        if event.type == pygame.KEYDOWN:
+        if event.type == pygame.KEYDOWN and (event.key == pygame.K_LEFT or event.key == pygame.K_RIGHT or event.key == pygame.K_UP):
+            print(numOptions)
             if event.key == pygame.K_LEFT:
                 Input = 1
             if event.key == pygame.K_RIGHT:
                 Input = 2
-            if event.key == pygame.K_UP:
+            if event.key == pygame.K_UP and numOptions == 3:
                 Input = 3
             
         
