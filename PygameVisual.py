@@ -41,8 +41,12 @@ dialogue = {
                   \nand fertility. By converting this god to your side, your strength has increased by 10! \
                   \n\nYou follow Taweret, who seems to easily navigate through the crowd of souls. Not wanting \
                   \nto lose your guide again you hastily follow. Eventually she leads you to a set of gates,\
-                  \none leads to a vast ocean, while the other leads to stretch of land, full of fire.',['eat', 'eat'],['ScenarioEnd','ScenarioEnd'],[[-1,0,0], [-1,0,0], [-1,0,0]],['PyramidBackground.jpg']],
-    #'Scenario8': ['',[],[]]
+                  \none leads to a vast ocean, while the other leads to stretch of land, full of fire. \
+                  \nWhich gate will you approach?',['Water Gate', 'Fire Gate'],['Scenario8','Scenario8'],[[-1,0,0], [-1,0,0], [-1,0,0]],['PyramidBackground.jpg']],
+    'Scenario8': ['Wait, before you go, remember that your journey to the Hall of Maat will be a dangerous one. \
+                  \nNever trust anyone, and keep in mind that even if you make it to the Hall alive, your heart \
+                  \nwill be weighed, and you must must be seen as worthy to enter Sekhet-A’Aru, the field of reeds', ['Thank Taweret and Continue on', 'Thank Taweret and Continue On'],['ScenarioEnd','ScenarioEnd'],[[-1,0,0], [-1,0,0], [-1,0,0]],['PyramidBackground.jpg']],
+    #'Scenario8': ['',[],[]]ing like 
     #'Scenario9': ['',[],[]]
     #'Scenario10': ['',[],[]]
     #'Scenario11': ['',[],[]]
