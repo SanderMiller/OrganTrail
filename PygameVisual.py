@@ -4,7 +4,7 @@ import os
 import random
 from time import sleep
 import time
-
+'''
 dialogue = {
     'Scenario1': ['You open your eyes, or at least so it seems, but they\'re met with a disconcerting sight. \
                   \nA coffin lies beneath you, with inscriptions that match your name. You notice a strange \
@@ -48,8 +48,8 @@ dialogue = {
     #'Scenario11': ['',[],[]]
     'ScenarioEnd': ['k', ['Play Again', 'Play Again'], ['Scenario1', 'Scenario1'],[[0,0,0], [0,0,0], [0,0,0]],['Youlost.jpg']]
     }
-
-file_path1 = '/home/cmay/Documents/OrganTrail/'
+'''
+file_path1 = '/home/sander/Documents/OrganTrail/'
 
 def resize(file_name, xDimension, yDimension):
     global file_path1
@@ -58,11 +58,11 @@ def resize(file_name, xDimension, yDimension):
     imgResized = cv2.resize(img, (xDimension, yDimension), cv2.INTER_CUBIC) #INTER_AREA
     cv2.imwrite(file_path, imgResized)
 
-# resize('FightVictory.jpg',1440,1024)
+resize('taweret.jpg',150,150)
 #resize('ArrowKeyRight.png',100,100)
 #resize('ArrowKeyUp.png',100,100)
 
-
+'''
 
 def fight(strength, health, currentScenario, lastScenario):
     global dialogue
@@ -215,3 +215,4 @@ while dead == False:
             pygame.display.flip()
 
             clock.tick(clock_tick_rate)
+'''
