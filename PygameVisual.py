@@ -124,14 +124,14 @@ dialogue = {
                    \nfeet in the water just to clean them.', ['Clean your feet', 'Remain with dirty feet'], ['Scenario28', 'Scenario28'], [[-1, 0, -1], [-1,0,1]], ['water.jpg','MonkeyThing.jpg']],
     'Scenario27': ['You hide under deck, but it seems the rest of the souls aboard had the same idea. \
                    \nWith Ra nowhere insight, there is nothing to defend you. The demons are easily able to tear \
-                   \napart the boat, and you feel the heat as you fall into the lake of fire.', ['Continue','Continue'], ['ScenarioEnd', 'ScenarioEnd'], [[-1, 0, 0], [-1,0,0]], ['fire.jpg','MonkeyThing.jpg']],
+                   \napart the boat, and you feel the heat as you fall into the lake of fire.', ['Continue','Continue'], ['ScenarioEnd', 'ScenarioEnd'], [[-1, 0, 0], [-1,0,0]], ['water.jpg','MonkeyThing.jpg']],
     'Scenario28': ['Finally after a long night you spot land off in the distance. It is almost dawn. \
                    \nYou grow excited, you have made it through some of the most treacherous parts of the journey. \
                    \nAs soon as you land you rush off the boat, eager to get to the Hall of Two Truths as soon \
                    \nas possible, when you hear a voice behind you. "Not so fast!" you look back to see the God \
                    \nof the sun, Ra behind you. "You have made it through thus far, but remember you still have yet \
                    \nto have your heart weighed, take this." With that he hands you an amulet, in the shape of a scarab. \
-                   \n"It is inscribed with a spell to ensure your heart will not speak out against you to Osiris."', ["Throw the Amulet at Ra", 'Take the amulet', 'Throw the amulet into the water'], ['ScenarioEnd', 'Scenario29', 'Scenario29'], [[-1,0,0],[-1,0,2],[-1,0,-20]],['water.jpg']],
+                   \n"It is inscribed with a spell to ensure your heart will not speak out against you to Osiris."', ["Throw the Amulet at Ra", 'Take the amulet', 'Throw the amulet into the water'], ['ScenarioEnd', 'Scenario29', 'Scenario29'], [[-1,0,0],[-1,0,2],[-1,0,-20]],['water.jpg', 'ra.jpg']],
     'Scenario29': ['You begin your trek up the steep mountain, before coming to a cave. You follow the crowd, \
                    \nmarching through the cave, on your way to The Hall of Two Truths.', ['Continue', 'Continue'], ['Scenario14', 'Scenario14'], [[-1,0,0],[-1,0,0]], ['Cavern.jpg']],
     'Scenario30': ['You enter into the huge doors of what is clearly the Hall of Two Truths. \
