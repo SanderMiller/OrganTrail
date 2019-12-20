@@ -13,7 +13,7 @@ dialogue = {
                   \nI’m afraid to say that you’re dead, due to a terrible accident. Don’t panic, death gets a bad \
                   \nreputation but it’s alright. We should get going, but real quick, what was your occupation? \
                   \n\n\nChoose your character',
-                 ['Pharaoh', 'Priest', 'Farmer'], ['Scenario2', 'Scenario2', 'Scenario2'], [[15,50,0,3], [10,60,1,5], [15,70,0,7]], ['PyramidBackground.jpg', 'Anubis.png'] ],
+                 ['Pharaoh', 'Priest', 'Farmer'], ['Scenario2', 'Scenario2', 'Scenario2'], [[10,50,0,3], [8,60,1,5], [6,70,0,5]], ['PyramidBackground.jpg', 'Anubis.png'] ],
     'Scenario2': ['We must make haste to the Hall of Two Truths, so that your soul can be weighed against \
                   \na feather and we can learn whether you may pass into the afterlife. Any questions? \
                   \n“W- w-” \
@@ -60,7 +60,7 @@ dialogue = {
                   \n-Well, toast, as it has been burned pretty badly. The bread is on a ledge, but out of the\
                   \ncorner of your eye you spot a Medjed, a ghost-like demon, scrabbling \
                   \nagainst the rock, attempting and failing to reach the bread. What do you do?'
-                  , ['Hand it the bread','Eat the bread to restore your health'],['Scenario11','Scenario11'],[[-1,0,1],[5,0,-1],[-1,0,0]],['fire.jpg', 'Henet.jpg']],
+                  , ['Hand it the bread','Eat the bread to restore your health'],['Scenario11','Scenario11'],[[-1,0,1],[5,0,-1],[-1,0,0]],['fire.jpg', 'Medjed.jpg']],
     'Scenario11': ['After passing by the MedJed you follow the path for a while. You eventually come to a door. \
                   \nYou can hear some scrabbles and squeals and other curious noises coming from the other side. \
                   \nWhat do you do?'
@@ -68,30 +68,30 @@ dialogue = {
     'Scenario12': ['You approach the keyhole, and put your eye down to it, listening the whole\
                   \ntime to try and make out any intelligible noises. As you peer through the\
                   \nsmall hole, the door opens from the other side and you are surrounded by sundisks.'
-                  , ['Fight them off','Yell "Sundisks, servants of Ra, cease!"','Dance off (come on this time it might work)'],['ScenarioFight','ScenarioEnd','ScenarioEnd','Scenario13'],[[-1,0,0],[-1,0,0],[-1,0,0]],['fire.jpg']],
+                  , ['Fight them off','Yell "Sundisks, servants of Ra, cease!"','Dance off (come on this time it might work)'],['ScenarioFight','ScenarioEnd','ScenarioEnd','Scenario13'],[[-1,0,0],[-1,0,0],[-1,0,0]],['fire.jpg', 'sundisk.jpg']],
     'Scenario13': ['The dust clears, and you stand over several piles of dazed sundisks. \
                   \n One of them appears to have dropped a bag of grain. What do you do?'
-                  ,['Take the bag of grain','Ignore the grain and continue on your way'],['Scenario14','Scenario14',],[[3,0,-1],[-1,0,1],[-1,0,0]],['fire.jpg']],
+                  ,['Take the bag of grain','Ignore the grain and continue on your way'],['Scenario14','Scenario14',],[[3,0,-1],[-1,0,1],[-1,0,0]],['fire.jpg','sundisk.jpg']],
     'Scenario14': ['You stumble out into a new kind of light, it appears that you made it out of the cave.\
                   \n You approach a huge set of gates, guarded by a massive demon known as "Apep"'
-                  ,['Fight it','Fight it','Fight it'],['ScenarioFight','ScenarioFight','ScenarioFight','Scenario16'],[[-1,0,0],[-1,0,0],[-1,0,0]],['fire.jpg']],
+                  ,['Fight it','Fight it','Fight it'],['ScenarioFight','ScenarioFight','ScenarioFight','Scenario16'],[[-1,0,0],[-1,0,0],[-1,0,0]],['HallOfOsiris.jpg','Apep.jpg']],
     'Scenario15': ['Apep appears unimpressed.'
-                  ,['Fight it Again','Fight it Again','Fight it Again'],['ScenarioFight','ScenarioFight','ScenarioFight','Scenario16'],[[-1,0,0],[-1,0,0],[-1,0,0]],['fire.jpg']],
+                  ,['Fight it Again','Fight it Again','Fight it Again'],['ScenarioFight','ScenarioFight','ScenarioFight','Scenario16'],[[-1,0,0],[-1,0,0],[-1,0,0]],['HallOfOsiris.jpg','Apep.jpg']],
     'Scenario16': ['Apep is bewildered at your strength. One more time might do it!'
-                  ,['Fight it Again','Fight it Again','Fight it Again'],['ScenarioFight','ScenarioFight','ScenarioFight','Scenario30'],[[-1,0,0],[-1,0,0],[-1,0,0]],['fire.jpg']],
+                  ,['Fight it Again','Fight it Again','Fight it Again'],['ScenarioFight','ScenarioFight','ScenarioFight','Scenario30'],[[-1,0,0],[-1,0,0],[-1,0,0]],['HallOfOsiris.jpg','Apep.jpg']],
     'Scenario17': ['Having made up your mind that water looked a lot less terrifying than water you \
                    \nmake your way to the water gate alone. You have prepared your whole life for this \
                    \njourney, but are this preparation only makes you more uneasy, you know what’s ahead. \
                    \nAs you walk through the gate it shuts behind you. No going back now. You are standing \
                    \non a dock, overlooking a seemingly endless ocean. Looking back you see a creature \
                    \nwith a human head, a feline body, and a forked tail. He is looking at you, so you \
-                   \ndecide to approach the creature.',['Continue', 'Continue'],['Scenario18','Scenario18'],[[-1,0,0],[-1,0,0]],['water.jpg'] ],
+                   \ndecide to approach the creature.',['Continue', 'Continue'],['Scenario18','Scenario18'],[[-1,0,0],[-1,0,0]],['water.jpg','GreatFace.jpg'] ],
     'Scenario18': ['“Looking for Sheket A’aru,” the creature asks. You nod your head. “Ah yes, just \
                    \nlike everyone else. Well Ra’s barque, the Meseket, won’t be here until dusk. \
-                   \nYou may as well wait around here.', ['Ask who are you?', 'Decide to swim instead', 'Wait Patiently'], ['Scenario19', 'ScenarioEnd', 'Scenario20'],[[-1,0,0],[-1,0,0],[-1,0,0]],['water.jpg']],
+                   \nYou may as well wait around here.', ['Ask who are you?', 'Decide to swim instead', 'Wait Patiently'], ['Scenario19', 'ScenarioEnd', 'Scenario20'],[[-1,0,0],[-1,0,0],[-1,0,0]],['water.jpg','GreatFace.jpg']],
     'Scenario19': ['I am known as “Great-Face, who opposes the aggressors”, the keeper of the waterway. \
                    \nI have been here a long time and seen a lot like you attempt to make it to Sheket A’aru, \
-                   \nI don’t know if you have what it takes.', ['Shout "You\'re wrong!" and jump into the water', 'Challenge him to a battle', 'Wait patiently'], ['ScenarioEnd', 'ScenarioFight', 'Scenario20', 'Scenario20'], [[-1,0,0],[-1,0,0],[-1,0,0]],['water.jpg']],
+                   \nI don’t know if you have what it takes.', ['Shout "You\'re wrong!" and jump into the water', 'Challenge him to a battle', 'Wait patiently'], ['ScenarioEnd', 'ScenarioFight', 'Scenario20', 'Scenario20'], [[-1,0,0],[-1,0,0],[-1,0,0]],['water.jpg','GreatFace.jpg']],
     'Scenario20': ['After hours of waiting in the hot sun, you see a piece of bread, left by a passerby. \
                    \nYou wonder if anyone will notice if you took it. It would regenerate some health \
                    \nfor you, but you also think back to the Negative Confessions.', ['Take the bread', 'Leave the bread'], ['Scenario21', 'Scenario22'], [[-1,0,-1],[-1,0,1]], ['water.jpg']],
@@ -115,16 +115,16 @@ dialogue = {
                    \nof the boat. You see that the vast sea has been replaced by a lake of fire. Looking \
                    \nover the edge into the fiery mess below you see a number of fire demons, serpents and \
                    \na large baboon you recognize to be Babi. You see the blood thirst in his eyes and know \
-                   \nthat if you don’t do anything you will surely perish.', ['Fight the demon', 'Hide Below Deck'], ['ScenarioFight', 'Scenario27', 'Scenario26'], [[-1,0,0],[-1,0,0]], ['fire.jpg']],
+                   \nthat if you don’t do anything you will surely perish.', ['Fight the demon', 'Hide Below Deck'], ['ScenarioFight', 'Scenario27', 'Scenario26'], [[-1,0,0],[-1,0,0]], ['fire.jpg','MonkeyThing.jpg']],
     'Scenario26': ['You lead the charge against Babi and are pleased to see that the rest of the souls on \
                    \nboard follow your lead. The mass of souls eventually is able to fight off the onslaught \
                    \nof demons, and the ship makes it through the lake of fire. You are relieved to see the \
                    \nshades of blue beneath the boat again, but without the light of the fire lake, you fall \
                    \ninto darkness. You feel gross, and wonder if it would be a good idea to dip your \
-                   \nfeet in the water just to clean them.', ['Clean your feet', 'Remain with dirty feet'], ['Scenario28', 'Scenario28'], [[-1, 0, -1], [-1,0,1]], ['water.jpg']],
+                   \nfeet in the water just to clean them.', ['Clean your feet', 'Remain with dirty feet'], ['Scenario28', 'Scenario28'], [[-1, 0, -1], [-1,0,1]], ['water.jpg','MonkeyThing.jpg']],
     'Scenario27': ['You hide under deck, but it seems the rest of the souls aboard had the same idea. \
                    \nWith Ra nowhere insight, there is nothing to defend you. The demons are easily able to tear \
-                   \napart the boat, and you feel the heat as you fall into the lake of fire.', ['Continue','Continue'], ['ScenarioEnd', 'ScenarioEnd'], [[-1, 0, 0], [-1,0,0]], ['fire.jpg']],
+                   \napart the boat, and you feel the heat as you fall into the lake of fire.', ['Continue','Continue'], ['ScenarioEnd', 'ScenarioEnd'], [[-1, 0, 0], [-1,0,0]], ['fire.jpg','MonkeyThing.jpg']],
     'Scenario28': ['Finally after a long night you spot land off in the distance. It is almost dawn. \
                    \nYou grow excited, you have made it through some of the most treacherous parts of the journey. \
                    \nAs soon as you land you rush off the boat, eager to get to the Hall of Two Truths as soon \
@@ -133,22 +133,22 @@ dialogue = {
                    \nto have your heart weighed, take this." With that he hands you an amulet, in the shape of a scarab. \
                    \n"It is inscribed with a spell to ensure your heart will not speak out against you to Osiris."', ["Throw the Amulet at Ra", 'Take the amulet', 'Throw the amulet into the water'], ['ScenarioEnd', 'Scenario29', 'Scenario29'], [[-1,0,0],[-1,0,2],[-1,0,-20]],['water.jpg']],
     'Scenario29': ['You begin your trek up the steep mountain, before coming to a cave. You follow the crowd, \
-                   \nmarching through the cave, on your way to The Hall of Two Truths.', ['Continue', 'Continue'], ['Scenario14', 'Scenario14'], [[-1,0,0],[-1,0,0]], ['cavern.jpg']],
+                   \nmarching through the cave, on your way to The Hall of Two Truths.', ['Continue', 'Continue'], ['Scenario14', 'Scenario14'], [[-1,0,0],[-1,0,0]], ['Cavern.jpg']],
     'Scenario30': ['You enter into the huge doors of what is clearly the Hall of Two Truths. \
                   \nIn a throne sits Anubis, and at his feet sits Ammit the devourer. A single pair of\
                   \nscales lies ready to judge the heart of those brave enough to attempt. You see Anubis\
                   \npacing on one side of the hall, and he nods to you. Osiris beckons you towards the scales\
                   \nand you stand ready to act. What will you do?'
-                  ,['Weigh your heart','Go out fighting'],['ScenarioWeigh','ScenarioEnd'],[[0,0,0],[0,0,0],[0,0,0]],['fire.jpg']],
+                  ,['Weigh your heart','Go out fighting'],['ScenarioWeigh','ScenarioEnd'],[[0,0,0],[0,0,0],[0,0,0]],['HallOfOsiris.jpg','Osiris.jpg']],
     'FinalScenario': ['Congratulations! You made it. You step out of the hall and onto a small \
                   \n boat, piloted by Hraf-Hef, the ferryman. He smiles at you, and offers you his congratulations.'
-                  ,['Smile back','ignore him','say thank you'],['ScenarioWin','ScenarioEnd','ScenarioWin'],[[-1,0,0],[-1,0,0],[-1,0,0]],['fire.jpg']],
+                  ,['Smile back','ignore him','say thank you'],['ScenarioWin','ScenarioEnd','ScenarioWin'],[[-1,0,0],[-1,0,0],[-1,0,0]],['FieldOfReeds.jpg']],
 
-    'ScenarioWin': ['', ['Play Again', 'Play Again'], ['Scenario1', 'Scenario1'],[[0,0,0], [0,0,0], [0,0,0]],['Youlost.jpg']],
+    'ScenarioWin': ['', ['Play Again', 'Play Again'], ['Scenario1', 'Scenario1'],[[0,0,0], [0,0,0], [0,0,0]],['SoulPassed.jpg']],
     'ScenarioEnd': ['', ['Play Again', 'Play Again'], ['Scenario1', 'Scenario1'],[[0,0,0], [0,0,0], [0,0,0]],['Youlost.jpg']]
     }
 
-file_path1 = 'C:\Users\Casey May\OrganTrail'
+file_path1 = 'C:/Users/Casey May/OrganTrail/'
 
 def resize(file_name, xDimension, yDimension):
     global file_path1
@@ -157,10 +157,9 @@ def resize(file_name, xDimension, yDimension):
     imgResized = cv2.resize(img, (xDimension, yDimension), cv2.INTER_CUBIC) #INTER_AREA
     cv2.imwrite(file_path, imgResized)
 
-resize('\Medjed.jpg',150,150)
+# resize('HallOfOsiris.jpg',1440,1024)
 #resize('ArrowKeyRight.png',100,100)
 #resize('ArrowKeyUp.png',100,100)
-
 
 def fight(strength, health, currentScenario, lastScenario):
     global dialogue
