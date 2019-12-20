@@ -78,7 +78,7 @@ dialogue = {
     'Scenario15': ['Apep appears unimpressed.'
                   ,['Fight it Again','Fight it Again','Fight it Again'],['ScenarioFight','ScenarioFight','ScenarioFight','Scenario16'],[[-1,0,0],[-1,0,0],[-1,0,0]],['fire.jpg']],
     'Scenario16': ['Apep is bewildered at your strength. One more time might do it!'
-                  ,['Fight it Again','Fight it Again','Fight it Again'],['ScenarioFight','ScenarioFight','ScenarioFight','ScenarioWeigh'],[[-1,0,0],[-1,0,0],[-1,0,0]],['fire.jpg']],
+                  ,['Fight it Again','Fight it Again','Fight it Again'],['ScenarioFight','ScenarioFight','ScenarioFight','Scenario30'],[[-1,0,0],[-1,0,0],[-1,0,0]],['fire.jpg']],
     'Scenario17': ['Having made up your mind that water looked a lot less terrifying than water you \
                    \nmake your way to the water gate alone. You have prepared your whole life for this \
                    \njourney, but are this preparation only makes you more uneasy, you know what’s ahead. \
@@ -134,7 +134,7 @@ dialogue = {
                    \n"It is inscribed with a spell to ensure your heart will not speak out against you to Osiris."', ["Throw the Amulet at Ra", 'Take the amulet', 'Throw the amulet into the water'], ['ScenarioEnd', 'Scenario29', 'Scenario29'], [[-1,0,0],[-1,0,2],[-1,0,-20]],['water.jpg']],
     'Scenario29': ['You begin your trek up the steep mountain, before coming to a cave. You follow the crowd, \
                    \nmarching through the cave, on your way to The Hall of Two Truths.', ['Continue', 'Continue'], ['Scenario14', 'Scenario14'], [[-1,0,0],[-1,0,0]], ['cavern.jpg']],
-    'ScenarioWeigh': ['You enter into the huge doors of what is clearly the Hall of Two Truths. \
+    'Scenario30': ['You enter into the huge doors of what is clearly the Hall of Two Truths. \
                   \nIn a throne sits Anubis, and at his feet sits Ammit the devourer. A single pair of\
                   \nscales lies ready to judge the heart of those brave enough to attempt. You see Anubis\
                   \npacing on one side of the hall, and he nods to you. Osiris beckons you towards the scales\
@@ -143,12 +143,12 @@ dialogue = {
     'FinalScenario': ['Congratulations! You made it. You step out of the hall and onto a small \
                   \n boat, piloted by Hraf-Hef, the ferryman. He smiles at you, and offers you his congratulations.'
                   ,['Smile back','ignore him','say thank you'],['ScenarioWin','ScenarioEnd','ScenarioWin'],[[-1,0,0],[-1,0,0],[-1,0,0]],['fire.jpg']],
-  
+
     'ScenarioWin': ['', ['Play Again', 'Play Again'], ['Scenario1', 'Scenario1'],[[0,0,0], [0,0,0], [0,0,0]],['Youlost.jpg']],
     'ScenarioEnd': ['', ['Play Again', 'Play Again'], ['Scenario1', 'Scenario1'],[[0,0,0], [0,0,0], [0,0,0]],['Youlost.jpg']]
     }
 
-file_path1 = '/home/cmay/Documents/OrganTrail/'
+file_path1 = 'C:\Users\Casey May\OrganTrail'
 
 def resize(file_name, xDimension, yDimension):
     global file_path1
@@ -157,7 +157,7 @@ def resize(file_name, xDimension, yDimension):
     imgResized = cv2.resize(img, (xDimension, yDimension), cv2.INTER_CUBIC) #INTER_AREA
     cv2.imwrite(file_path, imgResized)
 
-# resize('taweret.jpg',150,150)
+resize('\Medjed.jpg',150,150)
 #resize('ArrowKeyRight.png',100,100)
 #resize('ArrowKeyUp.png',100,100)
 
@@ -323,7 +323,7 @@ while dead == False:
             if currentScenario == 'ScenarioFight':
                 [health, currentScenario] = fight(strength, health, currentScenario, lastScenario)
             if currentScenario == 'ScenarioWeigh':
-                merit_check(merit, currentScenario)
+                currentScenario = merit_check(merit, currentScenario)
 
 
             scenarioCount+=1
