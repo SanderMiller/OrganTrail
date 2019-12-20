@@ -13,7 +13,7 @@ dialogue = {
                   \nI’m afraid to say that you’re dead, due to a terrible accident. Don’t panic, death gets a bad \
                   \nreputation but it’s alright. We should get going, but real quick, what was your occupation? \
                   \n\n\nChoose your character',
-                 ['Pharaoh', 'Priest', 'Farmer'], ['Scenario2', 'Scenario2', 'Scenario2'], [[15,50,0,3], [10,60,1,5], [15,70,0,7]], ['PyramidBackground.jpg', 'Anubis.png'] ],
+                 ['Pharaoh', 'Priest', 'Farmer'], ['Scenario2', 'Scenario2', 'Scenario2'], [[10,50,0,3], [8,60,1,5], [6,70,0,7]], ['PyramidBackground.jpg', 'Anubis.png'] ],
     'Scenario2': ['We must make haste to the hall of two truths, so that your soul can be weighed against \
                   \na feather and we can learn whether you may pass into the afterlife. Any questions? \
                   \n“W- w-” \
@@ -78,8 +78,8 @@ dialogue = {
     'Scenario15': ['Apep appears unimpressed.'
                   ,['Fight it Again','Fight it Again','Fight it Again'],['ScenarioFight','ScenarioFight','ScenarioFight','Scenario16'],[[-1,0,0],[-1,0,0],[-1,0,0]],['fire.jpg']],
     'Scenario16': ['Apep is bewildered at your strength. One more time might do it!'
-                  ,['Fight it Again','Fight it Again','Fight it Again'],['ScenarioFight','ScenarioFight','ScenarioFight','ScenarioWeigh'],[[-1,0,0],[-1,0,0],[-1,0,0]],['fire.jpg']],
-    'ScenarioWeigh': ['You enter into the huge doors of what is clearly the hall of two truths. \
+                  ,['Fight it Again','Fight it Again','Fight it Again'],['ScenarioFight','ScenarioFight','ScenarioFight','Scenario17'],[[-1,0,0],[-1,0,0],[-1,0,0]],['fire.jpg']],
+    'Scenario17': ['You enter into the huge doors of what is clearly the hall of two truths. \
                   \n In a throne sits Anubis, and at his feet sits Ammit the devourer. A single pair of\
                   \n scales lies ready to judge the heart of those brave enough to attempt. You see Anubis\
                   \n pacing on one side of the hall, and he nods to you. Osiris beckons you towards the scales\
@@ -131,8 +131,10 @@ def fight(strength, health, currentScenario, lastScenario):
 def merit_check(merit, currentScenario):
     if merit >= 0:
         currentScenario = 'FinalScenario'
+        print('if')
     else:
         currentScenario = 'ScenarioEnd'
+        print('else')
     return currentScenario
 
 
@@ -212,10 +214,6 @@ currentScenario = 'Scenario1'
 lastScenario = 'Scenario1'
 
 scenarioCount = 0
-attributes = {'Health': 0,
-              'Strength': 0,
-              'Merit': 0,
-              'TurnPerFood': 0 }
 
 size = (window_width, window_height)
 screen = pygame.display.set_mode(size)
@@ -271,7 +269,8 @@ while dead == False:
             if currentScenario == 'ScenarioFight':
                 [health, currentScenario] = fight(strength, health, currentScenario, lastScenario)
             if currentScenario == 'ScenarioWeigh':
-                merit_check(merit, currentScenario)
+                print('yep this here is this correct scenario')
+                currentScenario = merit_check(merit, currentScenario)
 
 
             scenarioCount+=1
