@@ -52,4 +52,4 @@ to play the game, copy paste "python PygameVisual.py" into terminal and click en
 
 
 Credit where it's due:
-The majority of the images in this game belong to the Met Museum's copyright free image library! We are not monetizing this game in any fashion, and the preprocessed images were not created or owned by us.
+The majority of the images in this game belong to the Met Museum's copyright free image library! Other images were taken from demonthings and a single image was taken from assassin creed origins photography mode. We are not monetizing this game in any fashion, and the preprocessed images were not created or owned by us.
