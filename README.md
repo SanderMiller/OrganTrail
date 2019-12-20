@@ -7,7 +7,7 @@ Currently we are considering using the Python library "pygame" to build our game
 Our next steps will be framing and structuring our game. We will have to consider what 3D models we will be including and their significance. We will begin brainstorming characters, and challenges that the player will face. We will have to do some more research on the Egyptian afterlife to ensure we are conveying accurate information. Then we will begin structuring our game in pygame.
 
 
-INSTRUCTIONS ON GETTING ACCESS TO OUR GAME FOR WINDOWS:<br/>
+##INSTRUCTIONS ON GETTING ACCESS TO OUR GAME FOR WINDOWS:<br/>
 **1.** <br/>
 Follow this link to download python: https://www.python.org/downloads/ (download python 3.8)
 
@@ -53,5 +53,5 @@ type `cd OrganTrail`
 to play the game, copy paste `python PygameVisual.py` into terminal and click enter
 
 
-**Credit where it's due:**
+##Credit where it's due:
 The majority of the images in this game belong to the Met Museum's copyright free image library! Other images were taken from demonthings and a single image was taken from assassin creed origins photography mode. We are not monetizing this game in any fashion, and the preprocessed images were not created or owned by us.
