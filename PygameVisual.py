@@ -13,7 +13,7 @@ dialogue = {
                   \nI’m afraid to say that you’re dead, due to a terrible accident. Don’t panic, death gets a bad \
                   \nreputation but it’s alright. We should get going, but real quick, what was your occupation? \
                   \n\n\nChoose your character',
-                 ['Pharaoh', 'Priest', 'Farmer'], ['Scenario2', 'Scenario2', 'Scenario2'], [[10,50,0,3], [8,60,1,5], [6,70,0,7]], ['PyramidBackground.jpg', 'Anubis.png'] ],
+                 ['Pharaoh', 'Priest', 'Farmer'], ['Scenario2', 'Scenario2', 'Scenario2'], [[15,50,0,3], [10,60,1,5], [15,70,0,7]], ['PyramidBackground.jpg', 'Anubis.png'] ],
     'Scenario2': ['We must make haste to the hall of two truths, so that your soul can be weighed against \
                   \na feather and we can learn whether you may pass into the afterlife. Any questions? \
                   \n“W- w-” \
@@ -42,7 +42,7 @@ dialogue = {
     'Scenario6': ['You try to make it through crowd on your own. Eventually after fighting the current of \
                   \nsouls you see a gate. There appear to be two options, a water and fire route. \
                   \nWhat do you do?',
-                 ['Approach the fire route.','Approach the water route'], ['Scenario4', 'ScenarioEnd'], [[-1,0,0], [-1,0,0], [-1,0,0]],['Cavern.jpg']],
+                 ['Approach the fire route.','Approach the water route'], ['Scenario4', 'Scenario17'], [[-1,0,0], [-1,0,0], [-1,0,0]],['Cavern.jpg']],
     'Scenario7': ['Congrats, through apotropaism you have befriended Taweret, the goddess of childbirth \
                   \nand fertility. By converting this god to your side, your strength has increased by 10! \
                   \n\nYou follow Taweret, who seems to easily navigate through the crowd of souls. Not wanting \
@@ -51,7 +51,7 @@ dialogue = {
                   \nWhich gate will you approach?',['Water Gate', 'Fire Gate'],['Scenario8','Scenario8'],[[-1,0,0], [-1,0,0], [-1,0,0]],['Cavern.jpg']],
     'Scenario8': ['Wait, before you go, remember that your journey to the Hall of Maat will be a dangerous one. \
                   \nNever trust anyone, and keep in mind that even if you make it to the Hall alive, your heart \
-                  \nwill be weighed, and you must must be seen as worthy to enter Sekhet-A’Aru, the field of reeds', ['Thank Taweret and Approach the Water Gate', 'Thank Taweret and Approach the Fire Gate'],['ScenarioEnd','Scenario4'],[[-1,0,0], [-1,0,0], [-1,0,0]],['Cavern.jpg', 'taweret.jpg']],
+                  \nwill be weighed, and you must must be seen as worthy to enter Sekhet-A’Aru, the field of reeds', ['Thank Taweret and Approach the Water Gate', 'Thank Taweret and Approach the Fire Gate'],['Scenario17','Scenario4'],[[-1,0,0], [-1,0,0], [-1,0,0]],['Cavern.jpg', 'taweret.jpg']],
     'Scenario9': ['After you utter her name she weakens and huddles to the ground, brandishing her Khopesh \
                   \nfor you to take. "You are a wise one, traveler." She says as she allows you to pass. \
                   \nAs you wield the khopesh you feel strength rush through you.'
@@ -73,20 +73,66 @@ dialogue = {
                   \n One of them appears to have dropped a bag of grain. What do you do?'
                   ,['Take the bag of grain','Ignore the grain and continue on your way'],['Scenario14','Scenario14',],[[3,0,-1],[-1,0,1],[-1,0,0]],['fire.jpg']],
     'Scenario14': ['You stumble out into a new kind of light, it appears that you made it out of the cave.\
-                  \n You approach a huge set of gates, guarded by a massive demon known as "apep"'
+                  \n You approach a huge set of gates, guarded by a massive demon known as "Apep"'
                   ,['Fight it','Fight it','Fight it'],['ScenarioFight','ScenarioFight','ScenarioFight','Scenario16'],[[-1,0,0],[-1,0,0],[-1,0,0]],['fire.jpg']],
     'Scenario15': ['Apep appears unimpressed.'
                   ,['Fight it Again','Fight it Again','Fight it Again'],['ScenarioFight','ScenarioFight','ScenarioFight','Scenario16'],[[-1,0,0],[-1,0,0],[-1,0,0]],['fire.jpg']],
     'Scenario16': ['Apep is bewildered at your strength. One more time might do it!'
-                  ,['Fight it Again','Fight it Again','Fight it Again'],['ScenarioFight','ScenarioFight','ScenarioFight','Scenario17'],[[-1,0,0],[-1,0,0],[-1,0,0]],['fire.jpg']],
-    'Scenario17': ['You enter into the huge doors of what is clearly the hall of two truths. \
-                  \n In a throne sits Anubis, and at his feet sits Ammit the devourer. A single pair of\
-                  \n scales lies ready to judge the heart of those brave enough to attempt. You see Anubis\
-                  \n pacing on one side of the hall, and he nods to you. Osiris beckons you towards the scales\
-                  \n and you stand ready to act. What will you do?'
+                  ,['Fight it Again','Fight it Again','Fight it Again'],['ScenarioFight','ScenarioFight','ScenarioFight','ScenarioWeigh'],[[-1,0,0],[-1,0,0],[-1,0,0]],['fire.jpg']],
+    'Scenario17': ['Having made up your mind that water looked a lot less terrifying than water you \
+                   \nmake your way to the water gate alone. You have prepared your whole life for this \
+                   \njourney, but are this preparation only makes you more uneasy, you know what’s ahead. \
+                   \nAs you walk through the gate it shuts behind you. No going back now. You are standing \
+                   \non a dock, overlooking a seemingly endless ocean. Looking back you see a creature \
+                   \nwith a human head, a feline body, and a forked tail. He is looking at you, so you \
+                   \ndecide to approach the creature.',['Continue', 'Continue'],['Scenario18','Scenario18'],[[-1,0,0],[-1,0,0]],['water.jpg'] ],
+    'Scenario18': ['“Looking for Sheket A’aru,” the creature asks. You nod your head. “Ah yes, just \
+                   \nlike everyone else. Well Ra’s barque, the Meseket, won’t be here until dusk. \
+                   \nYou may as well wait around here.', ['Ask who are you?', 'Decide to swim instead', 'Wait Patiently'], ['Scenario19', 'ScenarioEnd', 'Scenario20'],[[-1,0,0],[-1,0,0],[-1,0,0]],['water.jpg']],
+    'Scenario19': ['I am known as “Great-Face, who opposes the aggressors”, the keeper of the waterway. \
+                   \nI have been here a long time and seen a lot like you attempt to make it to Sheket A’aru, \
+                   \nI don’t know if you have what it takes.', ['Shout "You\'re wrong!" and jump into the water', 'Challenge him to a battle', 'Wait patiently'], ['ScenarioEnd', 'ScenarioFight', 'Scenario20', 'Scenario20'], [[-1,0,0],[-1,0,0],[-1,0,0]],['water.jpg']],
+    'Scenario20': ['After hours of waiting in the hot sun, you see a piece of bread, left by a passerby. \
+                   \nYou wonder if anyone will notice if you took it. It would regenerate some health \
+                   \nfor you, but you also think back to the Negative Confessions.', ['Take the bread', 'Leave the bread'], ['Scenario21', 'Scenario22'], [[-1,0,-1],[-1,0,1]], ['water.jpg']],
+    'Scenario21': ['You look around, before quickly snatching the bread. You again scan your surroundings, \
+                   \nbut nobody seems to have seen you, well done!', ['Continue', 'Continue'], ['Scenario23', 'Scenario23'],[[-1,0,0],[-1,0,0]], ['water.jpg']],
+    'Scenario22': ['You leave the bread, and a few minutes later the soul of a young boy comes and \
+                   \nretrieves the bread. Phew, you almost blew your chances of ever getting into Sheket A’aru.',['Continue', 'Continue'], ['Scenario23', 'Scenario23'],[[-1,0,0],[-1,0,0]], ['water.jpg']],
+    'Scenario23': ['As evening sets in you see Ra’s ship enter the port and dock. You join the crowd \
+                   \ndashing onto the Sheket, with hopes of reaching the Hall of Truth, and the field \
+                   \nof reeds. You find a seat on the top deck, towards the bow. You look up at the square \
+                   \nsails, full with wind, carrying the boat across smoothly across the sea. You wonder \
+                   \nif this is how it would feel to fly.You begin to drift off to sleep when you \
+                   \noverhear something that catches your attention. “She’ll eat your heart, stranding \
+                   \nyou in Duat forever.” What will you do?', ['Keep Listening', 'Forget about it and go to sleep'], ['Scenario24', 'Scenario25'],[[-1,0,-1],[-1,0,1]], ['water.jpg']],
+    'Scenario24': ['As you keep listening you hear that they are talking about the demon Ammit. \
+                   \nThe demon with the head of a crocodile, upper torso of a leopard, and lower torso \
+                   \nof a hippopotamus stays in the Hall of Truths, ready to devour any heart that weighs \
+                   \nmore than the Maat’s feather. While you knew all of this, the thought of Ammit still \
+                   \nmakes you uneasy.', ['Continue', 'Continue'], ['Scenario25', 'Scenario25'], [[-1,0,0],[-1,0,0]], ['water.jpg']],
+    'Scenario25': ['You fall into a restless sleep, when you are woke by large waves slapping the sides \
+                   \nof the boat. You see that the vast sea has been replaced by a lake of fire. Looking \
+                   \nover the edge into the fiery mess below you see a number of fire demons, serpents and \
+                   \na large baboon you recognize to be Babi. You see the blood thirst in his eyes and know \
+                   \nthat if you don’t do anything you will surely perish.', ['Fight the demon', 'Hide Below Deck'], ['ScenarioFight', 'Scenario27', 'Scenario26'], [[-1,0,0],[-1,0,0]], ['fire.jpg']],
+    'Scenario26': ['You lead the charge against Babi and are pleased to see that the rest of the souls on \
+                   \nboard follow your lead. The mass of souls eventually is able to fight off the onslaught \
+                   \nof demons, and the ship makes it through the lake of fire. You are relieved to see the \
+                   \nshades of blue beneath the boat again, but without the light of the fire lake, you fall \
+                   \ninto darkness. You feel gross, and wonder if it would be a good idea to dip your \
+                   \nfeet in the water just to clean them.', ['Clean your feet', 'Remain with dirty feet'], ['Scenario28', 'Scenario28'], [[-1, 0, -1], [-1,0,1]], ['water.jpg']],
+    'Scenario27': ['You hide under deck, but it seems the rest of the souls aboard had the same idea. \
+                   \nWith Ra nowhere insight, there is nothing to defend you. The demons are easily able to tear \
+                   \napart the boat, and you feel the heat as you fall into the lake of fire.', ['Continue','Continue'], ['ScenarioEnd', 'ScenarioEnd'], [[-1, 0, 0], [-1,0,0]], ['fire.jpg']],
+    'ScenarioWeigh': ['You enter into the huge doors of what is clearly the hall of two truths. \
+                  \nIn a throne sits Anubis, and at his feet sits Ammit the devourer. A single pair of\
+                  \nscales lies ready to judge the heart of those brave enough to attempt. You see Anubis\
+                  \npacing on one side of the hall, and he nods to you. Osiris beckons you towards the scales\
+                  \nand you stand ready to act. What will you do?'
                   ,['Weigh your heart','Go out fighting'],['ScenarioWeigh','ScenarioEnd'],[[0,0,0],[0,0,0],[0,0,0]],['fire.jpg']],
     'FinalScenario': ['Congratulations! You made it. You step out of the hall and onto a small \
-                  \n boat, piloted by hraf-hef, the ferryman. He smiles at you, and offers you his congratulations.'
+                  \n boat, piloted by Hraf-Hef, the ferryman. He smiles at you, and offers you his congratulations.'
                   ,['Smile back','ignore him','say thank you'],['ScenarioWin','ScenarioEnd','ScenarioWin'],[[-1,0,0],[-1,0,0],[-1,0,0]],['fire.jpg']],
     # 'Scenario17': ['Apep is bewildered at your strength. One more time might do it!'
     #               ,['Fight it Again','Fight it Again','Fight it Again'],['ScenarioFight','ScenarioFight','ScenarioFight','ScenarioEnd'],[[-1,0,0],[-1,0,0],[-1,0,0]],['fire.jpg']],
@@ -120,7 +166,7 @@ def fight(strength, health, currentScenario, lastScenario):
         pygame.display.flip()
         time.sleep(2)
         health += 3
-        currentScenario = dialogue[lastScenario][2][3]
+        currentScenario = dialogue[lastScenario][2][-1]
         print('Congrats, you defeated a demon!\n')
         print('Health' + str(health))
     else:
@@ -131,10 +177,8 @@ def fight(strength, health, currentScenario, lastScenario):
 def merit_check(merit, currentScenario):
     if merit >= 0:
         currentScenario = 'FinalScenario'
-        print('if')
     else:
         currentScenario = 'ScenarioEnd'
-        print('else')
     return currentScenario
 
 
@@ -214,6 +258,10 @@ currentScenario = 'Scenario1'
 lastScenario = 'Scenario1'
 
 scenarioCount = 0
+attributes = {'Health': 0,
+              'Strength': 0,
+              'Merit': 0,
+              'TurnPerFood': 0 }
 
 size = (window_width, window_height)
 screen = pygame.display.set_mode(size)
@@ -269,8 +317,7 @@ while dead == False:
             if currentScenario == 'ScenarioFight':
                 [health, currentScenario] = fight(strength, health, currentScenario, lastScenario)
             if currentScenario == 'ScenarioWeigh':
-                print('yep this here is this correct scenario')
-                currentScenario = merit_check(merit, currentScenario)
+                merit_check(merit, currentScenario)
 
 
             scenarioCount+=1
