@@ -42,6 +42,7 @@ copy paste:      curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py        
 type python get-pip.py into terminal and click enter
 
 pip install pygame
+
 pip install opencv-python
 
 4.
