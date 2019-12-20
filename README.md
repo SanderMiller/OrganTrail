@@ -61,3 +61,5 @@ The majority of the images in this game belong to the Met Museum's copyright fre
 Bennett, Zuzi. "Ancient Egyptian Demon Advent Calendar, Day 6: Keeper of the Waterway." *Demon Things – Ancient Egyptian Demonology Project, 6 Dec. 2013*, www.demonthings.com/tag/keeper/.
 
 Lunden, Geirr Kristian. “The Guardian of the Portal of Fire.” *Demon Things - Ancient Egyptian Demonology Project, 9 Dec. 2016*, www.demonthings.com/the-guardian-of-the-portal-of-fire/.
+
+Mark, Joshua J. “The Egyptian Afterlife & The Feather of Truth.” *Ancient History Encyclopedia*, Ancient History Encyclopedia, 15 Mar. 2018, www.ancient.eu/article/42/the-egyptian-afterlife--the-feather-of-truth/.
