@@ -332,6 +332,8 @@ while dead == False:
             else:
                 additionalString = ''
             #print('Health:' + str(health))
+            if health<1:
+                currentScenario = 'ScenarioEnd'
             visualize(currentScenario, health, strength, additionalString)
             pygame.display.flip()
 
