@@ -142,7 +142,7 @@ dialogue = {
                   ,['Weigh your heart','Go out fighting'],['ScenarioWeigh','ScenarioEnd'],[[0,0,0],[0,0,0],[0,0,0]],['HallOfOsiris.jpg','Osiris.jpg']],
     'FinalScenario': ['Congratulations! You made it. You step out of the hall and onto a small \
                   \n boat, piloted by Hraf-Hef, the ferryman. He smiles at you, and offers you his congratulations.'
-                  ,['Smile back','ignore him','say thank you'],['ScenarioWin','ScenarioEnd','ScenarioWin'],[[-1,0,0],[-1,0,0],[-1,0,0]],['FieldOfReeds.jpg']],
+                  ,['Smile back','ignore him','say thank you'],['ScenarioWin','ScenarioEnd','ScenarioWin'],[[-1,0,0],[-1,0,0],[-1,0,0]],['FieldofReeds.jpg']],
 
     'ScenarioWin': ['', ['Play Again', 'Play Again'], ['Scenario1', 'Scenario1'],[[0,0,0], [0,0,0], [0,0,0]],['SoulPassed.jpg']],
     'ScenarioEnd': ['', ['Play Again', 'Play Again'], ['Scenario1', 'Scenario1'],[[0,0,0], [0,0,0], [0,0,0]],['Youlost.jpg']]
