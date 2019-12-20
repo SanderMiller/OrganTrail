@@ -62,6 +62,8 @@ Bennett, Zuzi. "Ancient Egyptian Demon Advent Calendar, Day 6: Keeper of the Wat
 
 Lunden, Geirr Kristian. “The Guardian of the Portal of Fire.” *Demon Things - Ancient Egyptian Demonology Project, 9 Dec. 2016*, www.demonthings.com/the-guardian-of-the-portal-of-fire/.
 
+Mark, Joshua  J. “Ships of the Gods of Ancient Egypt.” *Ancient History Encyclopedia*, Ancient History Encyclopedia, 11 May 2017, www.ancient.eu/article/1062/ships-of-the-gods-of-ancient-egypt/.
+
 Mark, Joshua  J. “The Negative Confession.” *Ancient History Encyclopedia*, Ancient History Encyclopedia, 27 Apr. 2017, www.ancient.eu/The_Negative_Confession/.
 
 Mark, Joshua J. “The Egyptian Afterlife & The Feather of Truth.” *Ancient History Encyclopedia*, Ancient History Encyclopedia, 15 Mar. 2018, www.ancient.eu/article/42/the-egyptian-afterlife--the-feather-of-truth/.
