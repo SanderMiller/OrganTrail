@@ -14,7 +14,7 @@ dialogue = {
                   \nreputation but it’s alright. We should get going, but real quick, what was your occupation? \
                   \n\n\nChoose your character',
                  ['Pharaoh', 'Priest', 'Farmer'], ['Scenario2', 'Scenario2', 'Scenario2'], [[15,50,0,3], [10,60,1,5], [15,70,0,7]], ['PyramidBackground.jpg', 'Anubis.png'] ],
-    'Scenario2': ['We must make haste to the hall of two truths, so that your soul can be weighed against \
+    'Scenario2': ['We must make haste to the Hall of Two Truths, so that your soul can be weighed against \
                   \na feather and we can learn whether you may pass into the afterlife. Any questions? \
                   \n“W- w-” \
                   \n“Good! Let’s get on with it then.” Anubis rushes out of the room with no further words, \
@@ -100,7 +100,7 @@ dialogue = {
     'Scenario22': ['You leave the bread, and a few minutes later the soul of a young boy comes and \
                    \nretrieves the bread. Phew, you almost blew your chances of ever getting into Sheket A’aru.',['Continue', 'Continue'], ['Scenario23', 'Scenario23'],[[-1,0,0],[-1,0,0]], ['water.jpg']],
     'Scenario23': ['As evening sets in you see Ra’s ship enter the port and dock. You join the crowd \
-                   \ndashing onto the Sheket, with hopes of reaching the Hall of Truth, and the field \
+                   \ndashing onto the Sheket, with hopes of reaching the Hall of Two Truth, and the field \
                    \nof reeds. You find a seat on the top deck, towards the bow. You look up at the square \
                    \nsails, full with wind, carrying the boat across smoothly across the sea. You wonder \
                    \nif this is how it would feel to fly.You begin to drift off to sleep when you \
@@ -108,7 +108,7 @@ dialogue = {
                    \nyou in Duat forever.” What will you do?', ['Keep Listening', 'Forget about it and go to sleep'], ['Scenario24', 'Scenario25'],[[-1,0,-1],[-1,0,1]], ['water.jpg']],
     'Scenario24': ['As you keep listening you hear that they are talking about the demon Ammit. \
                    \nThe demon with the head of a crocodile, upper torso of a leopard, and lower torso \
-                   \nof a hippopotamus stays in the Hall of Truths, ready to devour any heart that weighs \
+                   \nof a hippopotamus stays in the Hall of Two Truths, ready to devour any heart that weighs \
                    \nmore than the Maat’s feather. While you knew all of this, the thought of Ammit still \
                    \nmakes you uneasy.', ['Continue', 'Continue'], ['Scenario25', 'Scenario25'], [[-1,0,0],[-1,0,0]], ['water.jpg']],
     'Scenario25': ['You fall into a restless sleep, when you are woke by large waves slapping the sides \
@@ -125,7 +125,16 @@ dialogue = {
     'Scenario27': ['You hide under deck, but it seems the rest of the souls aboard had the same idea. \
                    \nWith Ra nowhere insight, there is nothing to defend you. The demons are easily able to tear \
                    \napart the boat, and you feel the heat as you fall into the lake of fire.', ['Continue','Continue'], ['ScenarioEnd', 'ScenarioEnd'], [[-1, 0, 0], [-1,0,0]], ['fire.jpg']],
-    'ScenarioWeigh': ['You enter into the huge doors of what is clearly the hall of two truths. \
+    'Scenario28': ['Finally after a long night you spot land off in the distance. It is almost dawn. \
+                   \nYou grow excited, you have made it through some of the most treacherous parts of the journey. \
+                   \nAs soon as you land you rush off the boat, eager to get to the Hall of Two Truths as soon \
+                   \nas possible, when you hear a voice behind you. "Not so fast!" you look back to see the God \
+                   \nof the sun, Ra behind you. "You have made it through thus far, but remember you still have yet \
+                   \nto have your heart weighed, take this." With that he hands you an amulet, in the shape of a scarab. \
+                   \n"It is inscribed with a spell to ensure your heart will not speak out against you to Osiris."', ["Throw the Amulet at Ra", 'Take the amulet', 'Throw the amulet into the water'], ['ScenarioEnd', 'Scenario29', 'Scenario29'], [[-1,0,0],[-1,0,2],[-1,0,-20]],['water.jpg']],
+    'Scenario29': ['You begin your trek up the steep mountain, before coming to a cave. You follow the crowd, \
+                   \nmarching through the cave, on your way to The Hall of Two Truths.', ['Continue', 'Continue'], ['Scenario14', 'Scenario14'], [[-1,0,0],[-1,0,0]], ['cavern.jpg']],
+    'ScenarioWeigh': ['You enter into the huge doors of what is clearly the Hall of Two Truths. \
                   \nIn a throne sits Anubis, and at his feet sits Ammit the devourer. A single pair of\
                   \nscales lies ready to judge the heart of those brave enough to attempt. You see Anubis\
                   \npacing on one side of the hall, and he nods to you. Osiris beckons you towards the scales\
@@ -134,10 +143,7 @@ dialogue = {
     'FinalScenario': ['Congratulations! You made it. You step out of the hall and onto a small \
                   \n boat, piloted by Hraf-Hef, the ferryman. He smiles at you, and offers you his congratulations.'
                   ,['Smile back','ignore him','say thank you'],['ScenarioWin','ScenarioEnd','ScenarioWin'],[[-1,0,0],[-1,0,0],[-1,0,0]],['fire.jpg']],
-    # 'Scenario17': ['Apep is bewildered at your strength. One more time might do it!'
-    #               ,['Fight it Again','Fight it Again','Fight it Again'],['ScenarioFight','ScenarioFight','ScenarioFight','ScenarioEnd'],[[-1,0,0],[-1,0,0],[-1,0,0]],['fire.jpg']],
-    #'Scenario10': ['',[],[]]
-    #'Scenario11': ['',[],[]]tail of a crocodile
+  
     'ScenarioWin': ['', ['Play Again', 'Play Again'], ['Scenario1', 'Scenario1'],[[0,0,0], [0,0,0], [0,0,0]],['Youlost.jpg']],
     'ScenarioEnd': ['', ['Play Again', 'Play Again'], ['Scenario1', 'Scenario1'],[[0,0,0], [0,0,0], [0,0,0]],['Youlost.jpg']]
     }
