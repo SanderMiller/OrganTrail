@@ -50,7 +50,7 @@ type the following commands into terminal and click enter after each one <br/>
 put the following command into terminal: `git clone https://github.com/SanderMiller/OrganTrail.git`
 
 type `cd OrganTrail`
-to play the game, copy paste `python PygameVisual.py` into terminal and click enter
+to play the game, copy paste `python OrganTrail.py` into terminal and click enter
 
 
 ## Credit where it's due:
