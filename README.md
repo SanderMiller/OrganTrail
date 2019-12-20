@@ -51,4 +51,5 @@ type cd OrganTrail
 to play the game, copy paste "python PygameVisual.py" into terminal and click enter
 
 
-
+Credit where it's due:
+The majority of the images in this game belong to the Met Museum's copyright free image library! We are not monetizing this game in any fashion, and the preprocessed images were not created or owned by us.
