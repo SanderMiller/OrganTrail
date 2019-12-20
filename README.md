@@ -23,15 +23,15 @@ double-click on path
 
 click new
 
-paste in this (replacing UserNameHere with your local user name) C:\Users\UserNameHere\AppData\Local\Programs\Python\Python37
+paste in this (replacing UserNameHere with your local user name) `C:\Users\UserNameHere\AppData\Local\Programs\Python\Python37`
 
 click new again
 
-paste in this (again replacing usernamehere) C:\Users\UserNameHere\AppData\Local\Programs\Python\Python37\scripts
+paste in this (again replacing usernamehere) `C:\Users\UserNameHere\AppData\Local\Programs\Python\Python37\scripts`
 
 do the same for these two:
-C:\Program Files\Git\cmd\
-C:\Program Files\Git\bin\
+`C:\Program Files\Git\cmd\`
+`C:\Program Files\Git\bin\`
 
 
 **3.** <br/>
@@ -39,7 +39,7 @@ open command terminal (can be searched for on local computer using CMD)
 
 copy paste:      `curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py`             into terminal and click enter
 
-type the following commands into terminal and click enter after each one
+type the following commands into terminal and click enter after each one <br/>
 `python get-pip.py` 
 
 `pip install pygame`
@@ -47,11 +47,11 @@ type the following commands into terminal and click enter after each one
 `pip install opencv-python`
 
 **4.**<br/>
-put the following command into terminal: git clone https://github.com/SanderMiller/OrganTrail.git
+put the following command into terminal: `git clone https://github.com/SanderMiller/OrganTrail.git`
 
 type `cd OrganTrail`
-to play the game, copy paste "python PygameVisual.py" into terminal and click enter
+to play the game, copy paste `python PygameVisual.py` into terminal and click enter
 
 
-Credit where it's due:
+**Credit where it's due:**
 The majority of the images in this game belong to the Met Museum's copyright free image library! Other images were taken from demonthings and a single image was taken from assassin creed origins photography mode. We are not monetizing this game in any fashion, and the preprocessed images were not created or owned by us.
