@@ -55,3 +55,7 @@ to play the game, copy paste `python PygameVisual.py` into terminal and click en
 
 ## Credit where it's due:
 The majority of the images in this game belong to the Met Museum's copyright free image library! Other images were taken from demonthings and a single image was taken from assassin creed origins photography mode. We are not monetizing this game in any fashion, and the preprocessed images were not created or owned by us.
+
+Bennett, Zuzi. "Ancient Egyptian Demon Advent Calendar, Day 6: Keeper of the Waterway." *Demon Things – Ancient Egyptian Demonology Project, 6 Dec. 2013*, www.demonthings.com/tag/keeper/.
+
+Lunden, Geirr Kristian. “The Guardian of the Portal of Fire.” *Demon Things - Ancient Egyptian Demonology Project, 9 Dec. 2016*, www.demonthings.com/the-guardian-of-the-portal-of-fire/.
