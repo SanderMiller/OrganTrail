@@ -94,7 +94,7 @@ dialogue = {
                    \nI don’t know if you have what it takes.', ['Shout "You\'re wrong!" and jump into the water', 'Challenge him to a battle', 'Wait patiently'], ['ScenarioEnd', 'ScenarioFight', 'Scenario20', 'Scenario20'], [[-1,0,0],[-1,0,0],[-1,0,0]],['water.jpg','GreatFace.jpg']],
     'Scenario20': ['After hours of waiting in the hot sun, you see a piece of bread, left by a passerby. \
                    \nYou wonder if anyone will notice if you took it. It would regenerate some health \
-                   \nfor you, but you also think back to the Negative Confessions.', ['Take the bread', 'Leave the bread'], ['Scenario21', 'Scenario22'], [[-1,0,-1],[-1,0,1]], ['water.jpg']],
+                   \nfor you, but you also think back to the Negative Confessions.', ['Take the bread', 'Leave the bread'], ['Scenario21', 'Scenario22'], [[4,0,-1],[-1,0,1]], ['water.jpg']],
     'Scenario21': ['You look around, before quickly snatching the bread. You again scan your surroundings, \
                    \nbut nobody seems to have seen you, well done!', ['Continue', 'Continue'], ['Scenario23', 'Scenario23'],[[-1,0,0],[-1,0,0]], ['water.jpg']],
     'Scenario22': ['You leave the bread, and a few minutes later the soul of a young boy comes and \
@@ -332,7 +332,7 @@ while dead == False:
             else:
                 additionalString = ''
             #print('Health:' + str(health))
-            if health<1:
+            if health<0:
                 currentScenario = 'ScenarioEnd'
             visualize(currentScenario, health, strength, additionalString)
             pygame.display.flip()
