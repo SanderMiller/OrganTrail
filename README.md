@@ -29,8 +29,8 @@ click new again
 
 paste in this (again replacing usernamehere) `C:\Users\UserNameHere\AppData\Local\Programs\Python\Python37\scripts`
 
-do the same for these two:
-`C:\Program Files\Git\cmd\`
+do the same for these two:<br/>
+`C:\Program Files\Git\cmd\`<br/>
 `C:\Program Files\Git\bin\`
 
 
