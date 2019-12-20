@@ -7,14 +7,14 @@ Currently we are considering using the Python library "pygame" to build our game
 Our next steps will be framing and structuring our game. We will have to consider what 3D models we will be including and their significance. We will begin brainstorming characters, and challenges that the player will face. We will have to do some more research on the Egyptian afterlife to ensure we are conveying accurate information. Then we will begin structuring our game in pygame.
 
 
-INSTRUCTIONS ON GETTING ACCESS TO OUR GAME FOR WINDOWS:
-1. 
+INSTRUCTIONS ON GETTING ACCESS TO OUR GAME FOR WINDOWS:<br/>
+**1.** <br/>
 Follow this link to download python: https://www.python.org/downloads/ (download python 3.8)
 
 Follow this link to download git: https://git-scm.com/download/win
 run through the installation processes of both as instructed
 
-2. 
+**2.** <br/>
 Search "system variables" on your local computer and click on "edit the system environment variables"
 
 Click on the "environment variables" button
@@ -34,21 +34,21 @@ C:\Program Files\Git\cmd\
 C:\Program Files\Git\bin\
 
 
-3. 
+**3.** <br/>
 open command terminal (can be searched for on local computer using CMD)
 
-copy paste:      curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py             into terminal and click enter
+copy paste:      `curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py`             into terminal and click enter
 
-type python get-pip.py into terminal and click enter
+type `python get-pip.py` into terminal and click enter
 
-pip install pygame
+`pip install pygame`
 
-pip install opencv-python
+`pip install opencv-python`
 
-4.
+**4.**<br/>
 put the following command into terminal: git clone https://github.com/SanderMiller/OrganTrail.git
 
-type cd OrganTrail
+type `cd OrganTrail`
 to play the game, copy paste "python PygameVisual.py" into terminal and click enter
 
 
