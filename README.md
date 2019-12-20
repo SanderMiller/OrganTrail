@@ -39,7 +39,8 @@ open command terminal (can be searched for on local computer using CMD)
 
 copy paste:      `curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py`             into terminal and click enter
 
-type `python get-pip.py` into terminal and click enter
+type the following commands into terminal and click enter after each one
+`python get-pip.py` 
 
 `pip install pygame`
 
