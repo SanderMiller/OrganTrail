@@ -60,6 +60,8 @@ The majority of the images in this game belong to the Met Museum's copyright fre
 
 Bennett, Zuzi. "Ancient Egyptian Demon Advent Calendar, Day 6: Keeper of the Waterway." *Demon Things – Ancient Egyptian Demonology Project, 6 Dec. 2013*, www.demonthings.com/tag/keeper/.
 
+Hill, J. “Apep (Apophis).” *Ancient Egypt Online*, 2010, ancientegyptonline.co.uk/apep/.
+
 Lunden, Geirr Kristian. “The Guardian of the Portal of Fire.” *Demon Things - Ancient Egyptian Demonology Project, 9 Dec. 2016*, www.demonthings.com/the-guardian-of-the-portal-of-fire/.
 
 Mark, Joshua  J. “Ships of the Gods of Ancient Egypt.” *Ancient History Encyclopedia*, Ancient History Encyclopedia, 11 May 2017, www.ancient.eu/article/1062/ships-of-the-gods-of-ancient-egypt/.
